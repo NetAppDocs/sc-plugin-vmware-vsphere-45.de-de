@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_post-migration.html 
+keywords:  
+summary: Probleme, die nach der Migration von Backup-Metadaten zum SnapCenter Plug-in für VMware vSphere auftreten können 
+---
+= Nach der Migration
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Probleme, die nach der Migration von Backup-Metadaten zum SnapCenter Plug-in für VMware vSphere auftreten können
+
+* Bundle für Migrationsprotokolle
++
+Laden Sie das Bundle mit dem Migrationsprotokoll von herunter `App_Data/MigrationLog` Verzeichnis im SnapCenter-Installationsordner. Bewahren Sie das Migrations-Log-Bundle auf, bis Sie sicher sind, dass die Migration erfolgreich war.
+
+* Jobdetails im Dashboard
++
+Informationen zu den migrierten Backups werden im Fensterbereich „Letzte Jobs“ von VMware vSphere Web Client aufgeführt. Detaillierte Informationen werden jedoch erst dann im Dashboard angezeigt, wenn Backups nach der Migration durchgeführt werden.
+
+* Authentifizierungsfehler
++
+Wenn Sie keine Administratoranmeldedaten verwenden, kann es zu einem Authentifizierungsfehler kommen.
+
++
+link:scpivs44_manage_authentication_errors.html["Management von Authentifizierungsfehlern"]
+
+* Backup-Namen
++
+Sicherungsnamen vor der Migration haben das Format RGName `_HostName_Timestamp`. Beispiel: `-NAS_DS_RG_perf1server_07-05-2019_02.11.59.9338`.
+
++
+Backup-Namen nach der Migration haben das Format `RGName_Timestamp`.
+
++
+Beispiel: `-NAS_VM_RG_07-07-2019_21.20.00.0609`.
+
+* Vor- und Nachskripte
++
+Skripte, die für Ressourcengruppen konfiguriert sind, werden nicht migriert. Da Skripts, die für Windows-Systeme geschrieben wurden, möglicherweise nicht auf der Linux-basierten virtuellen Appliance ausgeführt werden, müssen Sie nach der Migration möglicherweise alle oder einen Teil der Skripte neu erstellen und diese Skripte hinzufügen. Beispielsweise sind Dateipfade in Windows nicht in Linux vorhanden, und eine Aufruf für ein `.bat` Batch-Datei funktioniert in Linux nicht.
+
++
+Eine Lösung besteht darin, ein vorhandenes Windows-basiertes Skript auf die Linux-basierte virtuelle Appliance zu legen und zu testen, ob das Skript ohne Änderungen funktioniert. Wenn dies nicht richtig funktioniert, ersetzen Sie jeden Windows-basierten Befehl im Skript durch einen entsprechenden Linux-kompatiblen Befehl.
+
+* Anmeldedaten für die Wiederherstellung von Gastdateien
++
+Die Anmeldedaten zur Wiederherstellung der Gastdatei werden nicht migriert. Daher müssen Sie nach der Migration neue Anmeldeinformationen für eine Gastdatei erstellen.
+
+* `scbr.override` Konfigurationsdatei
++
+Wenn Sie Einstellungen im festgelegt haben `scbr.override` Konfigurationsdatei; anschließend müssen Sie diese Datei auf die virtuelle SnapCenter VMware Plug-in-Appliance verschieben und den Web-Client-Service neu starten.
+
+* Upgrade applikationsbasierter Plug-ins für SnapCenter
++
+Wenn Sie das SnapCenter VMware Plug-in verwenden, um andere SnapCenter Plug-ins zu unterstützen, müssen Sie diese Plug-ins auf 4.2 oder höher aktualisieren.
+
+* Deinstallieren Sie SnapCenter Server
++
+Wenn Sie SnapCenter nur für die VM-konsistente oder absturzkonsistente Datensicherung verwenden, können Sie SnapCenter Server auf dem Windows Host deinstallieren, nachdem alle VM-Backups zum SnapCenter VMware Plug-in migriert wurden
+
+

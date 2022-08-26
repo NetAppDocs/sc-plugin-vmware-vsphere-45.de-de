@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate_snapcenter_backup_metadata_to_the_virtual_appliance.html 
+keywords:  
+summary: Mit den SnapCenter Windows PowerShell Cmdlets können Sie SnapCenter VM-konsistente Backup-Metadaten und SnapCenter applikationskonsistent für virtualisierte Daten-Backup-Metadaten in das SnapCenter Plug-in für die virtuelle VMware vSphere Appliance migrieren. 
+---
+= Migrieren Sie Windows-basierte VMware Backup-Metadaten mit SnapCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit den SnapCenter Windows PowerShell Cmdlets können Sie SnapCenter VM-konsistente Backup-Metadaten und SnapCenter applikationskonsistent für virtualisierte Daten-Backup-Metadaten in das SnapCenter Plug-in für die virtuelle VMware vSphere Appliance migrieren.
+
+.Schritte
+. Sichern Sie die MySQL Datenbank, und kopieren Sie dann das Backup an einen anderen Speicherort, um sicherzustellen, dass es aufgrund der Aufbewahrungsrichtlinie nicht gelöscht wird.
++
+link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["Sichern Sie das SnapCenter Plug-in für VMware vSphere MySQL Datenbank"]
+
+. Melden Sie sich beim VMware vSphere Web-Client an, und überprüfen Sie, ob keine Jobs ausgeführt werden.
+. Melden Sie sich mit dem SnapCenter Admin-Benutzernamen bei der SnapCenter-Benutzeroberfläche an.
++
+Verwenden Sie keinen anderen Benutzernamen, um sich anzumelden, selbst wenn dieser Benutzername über alle Berechtigungen verfügt, da dies zu einem Migrationsfehler führen kann.
+
+. Klicken Sie im linken Navigationsbereich der Windows SnapCenter-Benutzeroberfläche auf *Einstellungen*, dann auf die Registerkarte *Credential* und dann auf *Hinzufügen*, um Anmeldeinformationen für die virtuelle Appliance hinzuzufügen.
+. Erstellen Sie den Namen des Durchlaufs als Anmeldeinformationen, die im Cmdlet `Invoke-SCOVAMigration `verwendet werden sollen.
++
+
+NOTE: Sie müssen Linux für das Feld Authentifizierung auswählen.
+
++
+In diesem Schritt werden die Zugangsdaten hinzugefügt, die SnapCenter Server für den Zugriff auf die virtuelle Appliance während der Migration verwendet.
+
+. Öffnen Sie ein Windows PowerShell Fenster, und führen Sie die folgenden Cmdlets aus:
++
+`Open-SmConnection`
+
++
+`invoke-SCVOVAMigration -SourceSCVHost <old-SCV-host-IP> -DestinationSCVOVAHost <new-appliance-IP> -OVACredential <appliance-credentials> -ByPassValidationCheck -Overwrite -ContinueMigrationOnStorageError -ScheduleOffsetTime <time-offset>`
+
++
+Eine Übersicht über den Migrations-Workflow finden Sie unter link:scpivs44_migration_overview.html#migration_workflow["Migrations-Workflow"]
+
+
+
+
+IMPORTANT: Der optional `-Overwrite` Parameter ermöglicht eine schnellere Migration in großen Umgebungen. Dieser Parameter überschreibt die Daten in der MySQL-Datenbank auf dem SnapCenter Plug-in für VMware vSphere Host. Verwenden Sie das nicht `-Overwrite` Parameter mehrmals. Wenn Ihre Migration eine Teilmigration war, verwenden Sie die `-Overwrite` Bei einem anderen Parameter werden möglicherweise vorhandene migrierte Daten überschrieben. Wenn Sie ausführen `invoke-SCVOVAMigration` Mehr als einmal ohne das `-Overwrite` Parameter, zuvor migrierte Daten werden dupliziert.
+
+
+NOTE: Verwenden Sie den Parameter ZeitplandeOffsetTime, wenn sich der SnapCenter-Quell-Host und der Host des virtuellen SnapCenter VMware-Zielgeräts in verschiedenen Zeitzonen befinden. Der Wert kann ein positiver oder negativer Zeitversatz sein, um die geplanten Backup-Laufzeiten anzupassen. Geben Sie den Zeitunterschied im Format hh: Mm:ss an; z. B. 06:00:00 oder -06:00:00 für einen negativen Wert.

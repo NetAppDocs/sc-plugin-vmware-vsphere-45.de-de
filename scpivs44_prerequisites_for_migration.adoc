@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_prerequisites_for_migration.html 
+keywords:  
+summary: Stellen Sie vor der Migration zum SnapCenter Plug-in für VMware vSphere sicher, dass alle Voraussetzungen erfüllt sind. 
+---
+= Voraussetzungen für die Migration
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Stellen Sie vor der Migration zum SnapCenter Plug-in für VMware vSphere sicher, dass alle Voraussetzungen erfüllt sind.
+
+* Sie müssen SnapCenter Server 4.2 oder höher ausführen.
+* Sie müssen Administratoranmeldedaten verwenden.
+* Das SnapCenter Plug-in für die virtuelle VMware vSphere Appliance muss mit aktiviertem SnapCenter VMware Plug-in und einer Registrierung in vCenter implementiert werden.
+* Auf dem SnapCenter VMware Plug-in Dashboard muss der Status des SnapCenter Plug-ins für VMware vSphere „verbunden“ sein.
+* Sie müssen einen Linux-Typ als Anmeldedaten mit dem Konto erstellt haben, das bei der Bereitstellung des SnapCenter-VMware-Plug-ins angegeben wurde.
+* Alle Wiederherstellungs-Sessions von Gastdateien müssen gelöscht werden.
+* SnapCenter-Hosts müssen mit IP-Adressen und nicht vollständig qualifizierten Domänennamen (FQDN) konfiguriert sein.
++
+In einer Linked-Modus-Umgebung müssen Sie alle verknüpften Knoten zusammen migrieren.
+
+* Die Namen für Storage-VMs müssen für Management-LIFs aufgelöst werden. Wenn Sie hinzufügen `etc` Host-Einträge für Speicher-VM-Namen in SnapCenter müssen Sie überprüfen, dass sie auch von der virtuellen Appliance aus lösbar sind.
+

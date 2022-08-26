@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_migrate.html 
+keywords:  
+summary: Mithilfe der SnapCenter Windows PowerShell Cmdlets können Sie die Metadaten des SnapCenter Plug-in für VMware vSphere vom Windows-basierten SnapCenter Server auf das Linux-basierte SnapCenter Plug-in für die virtuelle Appliance VMware vSphere migrieren. 
+---
+= Migrationsoptionen und unterstützte Pfade
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mithilfe der SnapCenter Windows PowerShell Cmdlets können Sie die Metadaten des SnapCenter Plug-in für VMware vSphere vom Windows-basierten SnapCenter Server auf das Linux-basierte SnapCenter Plug-in für die virtuelle Appliance VMware vSphere migrieren.
+
+
+
+== Migrationsoptionen
+
+Es gibt zwei Migrationsoptionen:
+
+* Migration von SnapCenter
++
+Sie müssen Metadaten für Folgendes aus Windows-basierten SnapCenter migrieren:
+
++
+** VM-konsistente Backups, die vom SnapCenter Plug-in für VMware vSphere durchgeführt wurden, wenn das Plug-in als Windows-basierte Komponente von SnapCenter ausgeführt wurde.
+** Applikationskonsistente Datensicherungsmetadaten von virtualisierten Datenbanken oder Dateisystemen, die durch ein applikationsbasiertes Plug-in von SnapCenter mit Unterstützung durch das SnapCenter Plug-in für VMware vSphere durchgeführt wurden, wenn das Plug-in als Windows-basierte Komponente von SnapCenter ausgeführt wurde.
++
+Zur Migration verwenden Sie das Cmdlet "Windows SnapCenter PowerShell" `invoke-SCVOVAMigration.`
+
++
+Sie können Metadaten nur von SnapCenter 4.0 oder höher migrieren.
+
+
+
+* Migration von VSC
++
+Sie können VSC 6.2.x (SMVI) Metadaten für Backup-Jobs migrieren, die nicht in SnapCenter integriert sind.
+
++
+Für die Migration verwenden Sie das NetApp ToolChest: NetApp Import Utility für SnapCenter und die Virtual Storage Console. Denken Sie daran, die Migrationsoption VSC zu SnapCenter auszuwählen.
+
++
+Metadaten lassen sich nur zu vorhandenen Backups migrieren. Wenn Sie beispielsweise keine Backups haben, können Sie nicht nur Richtlinien migrieren.
+
+
+
+
+
+== Unterstützte Migrationspfade
+
+Siehe link:scpivs44_release_notes.html["SnapCenter Plug-in für VMware vSphere – Versionsinformationen"^] Weitere Informationen zu unterstützten Upgrade- und Migrationspfaden.

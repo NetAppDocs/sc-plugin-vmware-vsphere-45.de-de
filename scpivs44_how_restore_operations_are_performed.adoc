@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_how_restore_operations_are_performed.html 
+keywords:  
+summary: 'Für VMFS Umgebungen verwendet das SnapCenter Plug-in für VMware vSphere Klon- und Mount-Vorgänge mit Storage VMotion, um Restore-Vorgänge durchzuführen. Für NFS-Umgebungen verwendet das Plug-in natives ONTAP Single File SnapRestore (SFSR), um die Effizienz für die meisten Wiederherstellungsvorgänge zu steigern.' 
+---
+= Durchführen von Restore-Vorgängen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Für VMFS Umgebungen verwendet das SnapCenter Plug-in für VMware vSphere Klon- und Mount-Vorgänge mit Storage VMotion, um Restore-Vorgänge durchzuführen. Für NFS-Umgebungen verwendet das Plug-in natives ONTAP Single File SnapRestore (SFSR), um die Effizienz für die meisten Wiederherstellungsvorgänge zu steigern. Die folgende Tabelle zeigt, wie Wiederherstellungsvorgänge durchgeführt werden.
+
+|===
+| Restore-Vorgänge | Durchgeführt unter Verwendung von ONTAP SFSR in NFS Umgebungen | Durchführung mit Klon- und Mounten mit Storage VMotion in NFS-Umgebungen | Durchgeführt über Klon und Mount mit Storage VMotion in VMFS-Umgebungen 
+
+
+| Wiederherstellung von VMs und VMDKs aus primären Backups | Ja. |  | Ja. 
+
+
+| Wiederherstellung von VMs und VMDKs aus sekundären Backups | Ja. |  | Ja. 
+
+
+| Wiederherstellung gelöschter VMs und VMDKs aus primären Backups | Ja. |  | Ja. 
+
+
+| Wiederherstellung gelöschter VMs und VMDKs aus sekundären Backups |  | Ja. | Ja. 
+
+
+| Wiederherstellung von VMs und VMDKs aus VM-konsistenten primären Backups | Ja. |  | Ja. 
+
+
+| Wiederherstellung von VMs und VMDKs aus VM-konsistenten sekundären Backups |  | Ja. | Ja. 
+|===
+Die Wiederherstellung von Gastdateien erfolgt sowohl mit Klon- als auch Mount-Vorgängen (nicht Storage VMotion) in NFS- und VMFS-Umgebungen.
+
+
+IMPORTANT: Während eines Wiederherstellungsvorgangs tritt möglicherweise der Fehler auf `Host unresolved volumes is null` Oder `Exception while calling pre-restore on SCV….Error mounting cloned LUN as datastore…` Dies geschieht, wenn das SnapCenter VMware Plug-in versucht, den Klon erneut zu signieren. Aufgrund der Beschränkungen von VMware kann das SnapCenter VMware Plug-in den automatischen Neusignatur-Wert in erweiterten ESXi-Konfigurationen nicht steuern.
+
+Weitere Informationen zum Fehler finden Sie unter {Link-with-unters}[KB Artikel: SCV Clone oder Restore schlagen mit Fehler 'Host unresolved Volumes is null^].

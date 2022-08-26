@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_from_backups_overview.html 
+keywords:  
+summary: Sie können VMs, VMDKs, Dateien und Ordner von primären oder sekundären Backups wiederherstellen. 
+---
+= Überblick
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können VMs, VMDKs, Dateien und Ordner von primären oder sekundären Backups wiederherstellen.
+
+* VM-Wiederherstellungsziele
++
+Im SnapCenter Plug-in für VMware vSphere 4.4 und früher können Sie VMs nur auf dem ursprünglichen Host und Datenspeicher wiederherstellen.
+
++
+Ab dem SnapCenter Plug-in für VMware vSphere 4.5 können Sie VMs auf dem ursprünglichen Host oder auf einem anderen Host im selben vCenter Server oder auf einem anderen ESXi Host wiederherstellen, der im verknüpften Modus von demselben vCenter oder einem beliebigen vCenter gemanagt wird.
+
+* VMDK-Wiederherstellungsziele
++
+VMDKs können entweder auf dem ursprünglichen oder in einem alternativen Datastore wiederhergestellt werden.
+
+
+
+Sie können auch einzelne Dateien und Ordner in einer Gastdatei-Wiederherstellungssitzung wiederherstellen, die eine Sicherungskopie eines virtuellen Laufwerks anhängt und die ausgewählten Dateien oder Ordner wiederherstellt.
+
+Sie können Folgendes nicht wiederherstellen:
+
+* Datenspeicher
++
+Sie können das SnapCenter Plug-in für VMware vSphere nicht zur Wiederherstellung eines Datenspeichers verwenden, sondern nur für die einzelnen VMs im Datastore.
+
+* Backups entfernter VMs
++
+Sie können keine Backups von entfernten Storage-VMs wiederherstellen. Wenn Sie beispielsweise eine Storage VM mithilfe der Management-LIF hinzufügen und dann ein Backup erstellen, entfernen Sie diese Storage VM und fügen einen Cluster hinzu, der die gleiche Storage VM enthält. Der Wiederherstellungsvorgang für das Backup schlägt fehl.
+
+
