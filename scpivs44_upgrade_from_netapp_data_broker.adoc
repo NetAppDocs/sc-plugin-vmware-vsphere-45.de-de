@@ -22,6 +22,7 @@ Wenn Sie die neuen Funktionen des SnapCenter Plug-ins für VMware vSphere nutzen
 * Eine Best Practice besteht darin, vor dem Upgrade Backups der VM, die NetApp Data Broker enthält, zu erstellen.
 
 
+.Über diese Aufgabe
 Es gibt drei grundlegende Upgrade-Schritte:
 
 . Bereiten Sie sich auf das Upgrade vor.
@@ -89,6 +90,7 @@ Warten Sie, bis der Status „verbunden“ angezeigt wird.
 
 
 
+.Nachdem Sie fertig sind
 Nachdem das System die Meldung „Upgrade erfolgreich“ anzeigt, versucht das System, die Dienste zu starten.
 
 . Warten Sie, bis die Meldung „ENTER drücken, um fortzufahren“ angezeigt wird, und melden Sie sich dann beim SnapCenter Plug-in für die Management-GUI von VMware vSphere an.

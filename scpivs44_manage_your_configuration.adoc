@@ -22,6 +22,7 @@ Sie müssen das SnapCenter Plug-in für die Management-GUI von VMware vSphere ve
 
 Wenn Sie einen Backup-Zeitplan für ein SnapCenter-Plug-in für VMware vSphere Ressourcengruppe konfigurieren, wird automatisch der Zeitplan für die Zeitzone festgelegt, in der das SnapCenter VMware Plug-in bereitgestellt wird. Diese Zeitzone kann über das SnapCenter Plug-in für VMware vSphere Management-GUI geändert werden.
 
+.Bevor Sie beginnen
 Sie müssen die IP-Adresse und die Anmeldedaten für das SnapCenter Plug-in für die Management-GUI von VMware vSphere kennen.
 
 * Die IP-Adresse wurde bei der Bereitstellung des SnapCenter-VMware-Plug-ins angezeigt.
@@ -50,6 +51,7 @@ Die neue Zeitzone wird für alle Backups verwendet, die vom SnapCenter VMware Pl
 
 Die Anmeldeinformationen für das SnapCenter-Plug-in für die Management-GUI von VMware vSphere können geändert werden.
 
+.Bevor Sie beginnen
 Sie müssen die IP-Adresse und die Anmeldedaten für das SnapCenter Plug-in für die Management-GUI von VMware vSphere kennen.
 
 * Die IP-Adresse wurde bei der Bereitstellung des SnapCenter-VMware-Plug-ins angezeigt.
@@ -78,6 +80,7 @@ Es kann einige Minuten dauern, bis alle Dienste wieder verfügbar sind.
 
 Sie können die im SnapCenter-Plug-in für VMware vSphere konfigurierten Anmeldedaten für vCenter ändern. Diese Einstellungen werden vom Plug-in für den Zugriff auf vCenter genutzt.
 
+.Bevor Sie beginnen
 Sie müssen die IP-Adresse und die Anmeldedaten für das SnapCenter Plug-in für die Management-GUI von VMware vSphere kennen.
 
 * Die IP-Adresse wurde bei der Bereitstellung des SnapCenter-VMware-Plug-ins angezeigt.
@@ -106,6 +109,7 @@ image:scpivs44_image30.png["Fehler: Fehlendes Grafikbild"]
 
 Sie können die Netzwerkeinstellungen ändern, die im SnapCenter Plug-in für VMware vSphere konfiguriert sind. Diese Einstellungen werden vom Plug-in für den Zugriff auf vCenter genutzt.
 
+.Bevor Sie beginnen
 Sie müssen die IP-Adresse und die Anmeldedaten für das SnapCenter Plug-in für die Management-GUI von VMware vSphere kennen.
 
 * Die IP-Adresse wurde bei der Bereitstellung des SnapCenter-VMware-Plug-ins angezeigt.

@@ -26,8 +26,10 @@ Das SnapCenter Plug-in für VMware vSphere 4.5 und höher unterstützt Datastore
 
 
 
+.Bevor Sie beginnen
 Der ESXi Server, das SnapCenter VMware Plug-in und jedes vCenter müssen zur gleichen Zeit synchronisiert werden. Wenn Sie versuchen, Speicher hinzuzufügen, aber die Zeiteinstellungen für Ihre vCenters nicht synchronisiert sind, schlägt der Vorgang möglicherweise mit einem Java-Zertifikatfehler fehl.
 
+.Über diese Aufgabe
 Das SnapCenter VMware Plug-in führt Backup- und Restore-Vorgänge auf direkt verbundenen Storage-VMs und auf Storage-VMs in einem Storage-Cluster aus.
 
 

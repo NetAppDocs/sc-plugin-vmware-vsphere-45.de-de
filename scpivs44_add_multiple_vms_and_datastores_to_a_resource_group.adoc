@@ -16,6 +16,7 @@ summary: Mithilfe des Assistenten SnapCenter VMware vSphere Web-Client „Edit R
 [role="lead"]
 Mithilfe des Assistenten SnapCenter VMware vSphere Web-Client „Edit Resource Group“ können Sie jeder vorhandenen Ressourcengruppe mehrere VMs und Datastores hinzufügen.
 
+.Über diese Aufgabe
 Fügen Sie SAN- und NAS-Datastores hinzu, aber nicht VSAN oder VVOL Datastores.
 
 .Schritte
