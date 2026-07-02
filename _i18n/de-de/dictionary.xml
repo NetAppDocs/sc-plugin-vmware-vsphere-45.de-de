@@ -445,7 +445,6 @@
   <block id="b3b58566d772ea091ad559ad7c722828" category="inline-link-macro">Nach der Implementierung erforderliche Betriebsabläufe und Probleme</block>
   <block id="8d9c5cc14a4e4caa925cbd7a13131b96" category="paragraph"><block ref="8d9c5cc14a4e4caa925cbd7a13131b96" category="inline-link-macro-rx"></block></block>
   <block id="c668bd9b3cf929998758f1286539cf07" category="inline-link-macro">Migrieren Sie Windows-basierte VMware Backup-Metadaten mit SnapCenter</block>
-  <block id="5ab39eb962f4ca6c2fa2841599dc4b73" category="paragraph"><block ref="5ab39eb962f4ca6c2fa2841599dc4b73" category="inline-link-macro-rx"></block></block>
   <block id="2b0dafc2da4c6291434d6dd354abe38d" category="summary">Der Migrationsbefehl migriert nur Metadaten von SnapCenter 4.0 und höher. Wenn Sie eine frühere Version von SnapCenter verwenden, müssen Sie vor der Migration zuerst ein Upgrade durchführen.</block>
   <block id="023f24f55850eacb351f762db9b50e81" category="doc">Migrationsübersicht</block>
   <block id="2feaeb2408c183d076a33a4219e1d2f9" category="section-title">Was wird migriert</block>
@@ -601,7 +600,6 @@
   <block id="7ea045d5f9f1f71a21d66023c045129c" category="paragraph">Die MySQL Backup Datenbank wird an ihren ursprünglichen Speicherort wiederhergestellt.</block>
   <block id="89321ccbd89a9e660bc76b0f2974632d" category="summary">Das SnapCenter VMware Plug-in nutzt SSL-Verschlüsselung für eine sichere Kommunikation mit dem Client-Browser. Während dies verschlüsselte Daten über das Netzwerk, die Erstellung eines neuen selbst signiertes Zertifikat, oder mit Ihrer eigenen Certificate Authority (CA) Infrastruktur oder eine Drittanbieter-CA ermöglicht, stellt sicher, dass das Zertifikat ist einzigartig für Ihre Umgebung.</block>
   <block id="9668b00eae1748d51afb7f725a15301a" category="inline-link">KB-Artikel: Erstellen und/oder importieren Sie ein SSL-Zertifikat in SnapCenter Plug-in für VMware vSphere</block>
-  <block id="ba9184cb661fa8aa1f1e6f33c3d4f7b2" category="paragraph">Siehe<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block>.</block>
   <block id="421829fbd339504809d87be62b8dd3b1" category="summary">In den Versionshinweisen finden Sie wichtige Informationen zu dieser Version des SnapCenter Plug-ins für VMware vSphere, einschließlich Lizenzierungsanforderungen, bekannten Problemen, Vorsichtsmaßnahmen, Einschränkungen, Und jegliche Aktualisierungen oder Korrekturen der Dokumentation.</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Versionshinweise</block>
   <block id="719eed7371ae4d07ca201e91a820334c" category="paragraph">In den Versionshinweisen finden Sie wichtige Informationen zu dieser Version des SnapCenter Plug-ins für VMware vSphere, einschließlich Lizenzierungsanforderungen, bekannten Problemen, Vorsichtsmaßnahmen, Einschränkungen, Und jegliche Aktualisierungen oder Korrekturen der Dokumentation. Weitere Informationen finden Sie unter:</block>
@@ -660,7 +658,6 @@
   <block id="5990783a93858d845e12e401808f16f3" category="list-text">Wenn die Anzahl der Snapshot-Kopien auf dem sekundären Storage (Mirror-Vault) die Obergrenze erreicht, schlägt die Aktivität zur Registrierung von Backup und zur Anwendung der Aufbewahrung im Backup-Vorgang mit dem folgenden Fehler fehl:<block ref="5a9cca26582442620c7aafc02ff929a9" prefix=" " category="inline-code"></block></block>
   <block id="7cb7ec638ee3f628b5dd7b29b735054f" category="paragraph">Um dieses Problem zu beheben, konfigurieren Sie die SnapMirror Aufbewahrungsrichtlinie für den sekundären Storage, um das maximale Limit von Snapshot Kopien zu vermeiden.</block>
   <block id="585f74b2337dcf50d5f84248087dbc7a" category="inline-link">SnapCenter-Informationen zur Nutzung der rollenbasierten Zugriffssteuerung</block>
-  <block id="339d9a9c6148bb34e3d15a00f296465c" category="paragraph">Informationen darüber, wie Administratoren Benutzern Ressourcen zuweisen, finden Sie im<block ref="3c6a9a14d0d13aed475a45101fc3cc00" category="inline-link-rx"></block>.</block>
   <block id="600a5d9204570f4fa6ca6b92c38201a2" category="list-text">Wenn Sie VM-konsistente Backups wünschen, müssen VMware Tools installiert und ausgeführt werden. Um VMs stillzulegen, sind VMware Tools erforderlich.</block>
   <block id="567ee5fafb197286f35c17cbadbca640" category="paragraph">Die meisten Felder auf diesen Assistentenseiten sind selbsterklärend. In den folgenden Informationen werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.</block>
   <block id="406017c1f63a5ea525013c02ee27c794" category="list-text">Klicken Sie im linken Navigator-Bereich des VMware vSphere Web-Clients auf *Richtlinien*.</block>
@@ -1776,10 +1773,6 @@
   <block id="3d2b891e87f58587dcf56e520915afef" category="section-title">Szenario 2</block>
   <block id="f10b6f1c4d02bc80958fe9ea3ad90e77" category="paragraph">Das SnapCenter Plug-in für die VMware vSphere-Verbindung wurde angehalten oder der Service wurde während der Migration beendet.</block>
   <block id="f8347cb1619ceb451f0b50f381bb2720" category="paragraph">Das SnapCenter Plug-in für VMware vSphere Verbindungsstatus muss während des Migrationsprozesses „verbunden“ sein. Sie können die Konfiguration für die Zeitdauer auch manuell in der virtuellen Appliance aktualisieren.</block>
-  <block id="8a4139ea0786f41cc68aee2d93ca450a" category="paragraph">Der Migrationsbefehl migriert Metadaten von #SnapCenter 4.0 und höher nur#. Wenn Sie eine frühere Version von SnapCenter verwenden, müssen Sie vor der Migration zuerst ein Upgrade durchführen.</block>
-  <block id="ec3d3431008e42a4c37055a78db7f12e" category="list-text">Zu den migrierten gehören</block>
-  <block id="076b638a7f6c60dc2af3157c7af35158" category="list-text">Cmdlet zur Migration</block>
-  <block id="4da72ab114de409c72a5b91f5ad57eac" category="list-text">Registrierung des vSphere Hosts für das SnapCenter VMware Plug-in `mit SnapCenter zur Unterstützung applikationsbasierter Backups virtualisierter Datenbanken und Filesysteme (Anwendung über VMDK-Backups)</block>
   <block id="041b4550a0ec6359f99eb2257afd1afa" category="summary">Wenn Sie eine VM wiederherstellen, können Sie den vorhandenen Inhalt mit der von Ihnen ausgewählten Backup-Kopie überschreiben oder eine Kopie der VM erstellen.</block>
   <block id="0b156eb7ae06ec8e963e1dd7bed83e94" category="doc">Wiederherstellung von VMs aus Backups</block>
   <block id="b14e0e0fe870958315bd1b702bfa088a" category="list-text">In den ursprünglichen Datastore, der auf dem ursprünglichen ESXi-Host gemountet wird (dadurch wird die ursprüngliche VM überschrieben)</block>
@@ -1980,4 +1973,7 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="4ddfe5345c1893eaed7f3552ae181f2a" category="paragraph">Siehe <block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>.</block>
+  <block id="9c6e71898eae8897a7d429e3065e5a68" category="paragraph">Informationen darüber, wie Administratoren Benutzern Ressourcen zuweisen, finden Sie unter<block ref="d818f211a7449f29082596280ad483fa" category="inline-link-rx"></block>.</block>
+  <block id="a621a06ff9228f52f24b83c3da378df2" category="paragraph"><block ref="a621a06ff9228f52f24b83c3da378df2" category="inline-link-macro-rx"></block></block>
 </blocks>
